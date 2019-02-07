@@ -1,16 +1,18 @@
 {
-  "extends": [
-    "tslint-config-standard"
-  ],
+  "defaultSeverity": "error",
+  "extends": ["tslint:latest", "tslint-config-airbnb", "tslint-config-prettier"],
+  "jsRules": {},
   "rules": {
-    "await-promise": false,
-    "no-floating-promises": false,
-    "no-implicit-dependencies": false,
-    "no-unnecessary-qualifier": false,
-    "no-unnecessary-type-assertion": false,
-    "no-unused-variable": false,
-    "no-use-before-declare": false,
-    "return-undefined": false,
-    "strict-type-predicates": false
-  }
+    "no-console": {
+      "severity": "warning",
+      "options": ["debug", "info", "log", "time", "timeEnd", "trace"]
+    },
+    "ordered-imports": false,
+    "import-name": {
+      "severity": "warning"
+    },
+    "object-literal-sort-keys": false,
+    "no-submodule-imports": false
+  },
+  "rulesDirectory": []
 }
